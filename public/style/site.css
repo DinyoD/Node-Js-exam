@@ -1,0 +1,18 @@
+
+ul {
+    width: 100vw;
+    background-color: gray;
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.template {
+    width: 100vw;
+    height: 60vh;
+    background-color: bisque;
+    color: aqua;
+}
+.template h2{
+    text-align: center;
+}
