@@ -24,6 +24,7 @@ userSchema.pre('save', function (next){
                 next(err);
             }
             this.password = hash;
+            next();
         });
     })
 });

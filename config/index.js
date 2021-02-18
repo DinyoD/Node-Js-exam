@@ -9,6 +9,7 @@ const config = {
         DB_CONNECTION: `mongodb://localhost/${dbName}`,
         SALT_ROUNDS: 10,
         SECRET: 'asdf15fds15fds742dfc',
+        COOKIE_NAME: 'USER_SESSION'
     },
     production: {
 
