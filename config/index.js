@@ -7,6 +7,8 @@ const config = {
     dev: {
         PORT: 5000,
         DB_CONNECTION: `mongodb://localhost/${dbName}`,
+        SALT_ROUNDS: 10,
+        SECRET: 'asdf15fds15fds742dfc',
     },
     production: {
 
