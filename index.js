@@ -1,12 +1,13 @@
 const express = require('express');
-const env = process.env.NODE_ENV || 'dev';
-const config = require('./config')[env];
 const setupExpress = require('./config/express')
+const mongoose = require('./config/mongoose');
+const config = require('./config');
 const router = require('./router');
 
 
 const app = express();
 setupExpress(app);
+mongoose(app);
 
 app.use(router);
 
