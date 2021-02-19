@@ -1,8 +1,9 @@
 <div class="template">
     <h2>
-        Home page
-        {{#each content}}
-            {{> text}}
-        {{/each}}
+        {{#if isAuth}}
+            <span>Hello, {{user.username}}</span>
+        {{else}}
+            <span>Home page</span>
+        {{/if}}
     </h2>
 </div>

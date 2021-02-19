@@ -25,7 +25,7 @@ const login = async ({username, password}) => {
         throw {error: 'Wrong password!'}
     }
 
-    let token = jwt.sign({_id: user._id}, SECRET);
+    let token = jwt.sign({_id: user._id, username }, SECRET);
 
     return token;
 }
