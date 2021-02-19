@@ -1,9 +1,11 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
+
 const auth = require('../middlewares/auth');
 const cookieParser = require('cookie-parser');
 
 function setupExpress(app) {
+
     app.engine('hbs', handlebars({
         extname: 'hbs',
     }));
@@ -18,7 +20,6 @@ function setupExpress(app) {
 
     app.use(cookieParser());
     app.use(auth());
-    //TODO auth middleware
 }
 
 module.exports = setupExpress;
