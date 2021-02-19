@@ -18,7 +18,8 @@ router.post('/register', async (req, res) => {
         await usersService.register({ username, password});
         res.redirect('/user/login');
     } catch (err) {
-        res.render('register', {error: err})
+        console.log(err);
+        res.render('register', {error: err.error})
     }
 })
 

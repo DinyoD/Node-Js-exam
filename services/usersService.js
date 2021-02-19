@@ -5,7 +5,11 @@ const jwt = require('jsonwebtoken');
 const { SECRET } = require('../config')
 
 const register = async ({username, password}) => {
+    if (!username || !password) {
+        throw { error: 'Username and Password are required!'}
+    }
     const user = new User({username, password});
+    console.log(user);
     return await user.save();
 }
 const login = async ({username, password}) => {
